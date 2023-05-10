@@ -1,9 +1,15 @@
 import React from 'react'
-import styleObj from './style.module.scss'
+import './style.scss'
 
 function Page10001_home() {
+
+    function change() {
+        console.log(document.querySelector('html'));
+        document.querySelector('html').setAttribute('data-theme', 'dark')
+    }
+
     return (
-        <div className={styleObj['a']}>Page10001_home</div>
+        <div className={'aa'} onClick={change}>Page10001_home</div>
     )
 }
 

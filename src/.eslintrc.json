@@ -1,0 +1,55 @@
+{
+  //https://nodejs.cn/eslint/command-line-interface/#--env,此选项启用特定环境
+  //https://nodejs.cn/eslint/configure/language-options/#specifying-environments
+  "env": {
+    "node": true, //node
+    "mocha": true, //mocha
+    "jest": true, //jest
+    "es6": true, //ECMAScript 6 功能
+    "browser": true //浏览器
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  //https://nodejs.cn/eslint/command-line-interface/#--parser,编译器
+  "parser": "@babel/eslint-parser", //解决require报错
+  //https://nodejs.cn/eslint/command-line-interface/#--parser-options,指定 ESLint 使用的解析器选项
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 6,
+    "requireConfigFile": false,
+    "sourceType": "module"
+  },
+  //https://nodejs.cn/eslint/command-line-interface/#--plugin,指定要加载的插件
+  "plugins": ["react", "jsx-a11y", "react-hooks"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  //https://nodejs.cn/eslint/command-line-interface/#--global,定义全局变量
+  "globals": {
+    "JSX": true,
+    "React": true,
+    "NodeJS": true,
+    "Promise": true
+  },
+  //https://nodejs.cn/eslint/command-line-interface/#--rule,规则
+  "rules": {
+    "no-debugger": 0, //禁用 debugger
+    "no-unused-vars": "off", //已声明的变量在代码里未被使用过
+    "eqeqeq": 0, //===或!==
+    "no-empty": 0, //禁止有空语句块
+    "semi": 0, //每一个表达式的结尾应该以分号结尾
+    "no-extra-semi": 0, //不必要的分号
+    "no-loss-of-precision": 0, //精度
+    "react/prop-types": 0, //props验证
+    "react/display-name": 0,
+    "react-hooks/exhaustive-deps": 0,
+    "react/jsx-pascal-case": 0
+  }
+}
