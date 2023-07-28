@@ -1,0 +1,16 @@
+.ThemeButton {
+  cursor: pointer;
+}
+.ThemeButton_modal {
+  width: 100px;
+  border: 1px solid var(--root-color-border);
+  border-radius: var(--root-radius-s);
+  font-size: var(--root-font-size-6);
+  background-color: var(--root-color-background);
+  div {
+    margin: 4px;
+    border-radius: var(--root-radius-s);
+    padding: 0 4px;
+    box-shadow: var(--root-color-shadow);
+  }
+}

@@ -1,0 +1,65 @@
+:root {
+  --root-radius-s: 4px;
+  --root-radius-m: 8px;
+  --root-radius-l: 12px;
+  --root-font-size-1: 9px;
+  --root-font-size-2: 10px;
+  --root-font-size-3: 11px;
+  --root-font-size-4: 12px;
+  --root-font-size-5: 13px;
+  --root-font-size-6: 14px;
+  --root-font-size-7: 15px;
+  --root-font-size-8: 16px;
+  --root-font-size-9: 17px;
+  --root-font-size-10: 18px;
+  --root-color-primary: #1677ff;
+  --root-color-success: #00b578;
+  --root-color-warning: #ff8f1f;
+  --root-color-danger: #ff3141;
+  --root-color-white: #ffffff;
+  --root-color-text: #333333;
+  --root-color-text-hover: #ffffff;
+  --root-color-text-secondary: #666666;
+  --root-color-weak: #999999;
+  --root-color-light: #cccccc;
+  --root-color-border: #cccccc;
+  --root-color-box: #f5f5f5;
+  --root-color-background: #ffffff;
+  --root-color-background-hover: #333333;
+  --root-color-shadow: 0 2px 4px 0 #cccccc;
+  --root-color-process: #1677ff;
+}
+body {
+  font-size: var(--root-font-size-main);
+  /* font-family: var(--root-font-family); */
+}
+
+a {
+  color: var(--root-color-primary);
+  transition: opacity ease-in-out 0.2s;
+}
+a:active {
+  opacity: 0.8;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 999;
+}
+::view-transition-new(root) {
+  z-index: 1;
+}
+html {
+  background-color: var(--root-color-background);
+  color: var(--root-color-text);
+}
+.hoverdom:hover {
+  background-color: var(--root-color-background-hover);
+  color: var(--root-color-text-hover);
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}

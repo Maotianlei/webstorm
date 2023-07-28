@@ -6,7 +6,7 @@
  * @param {any} vdefault
  * @returns {any}
  */
-export function getvalue(json, key, vdefault) {
+export function getjson(json, key, vdefault) {
   if (key in json && json[key] != undefined) {
     return json[key];
   }

@@ -3,18 +3,23 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import "@/style/root/reset.css";
+import "@/style/root/global.css";
+import "@/style/root/themes.css";
 
-import routes from "@/router/router";
-import { reportWebVitals } from "@/utils/react-scaffold";
+import routerlist from "@/router/routerFactory";
+import otherrouter from "@/router/otherrouter";
+
+// import { reportWebVitals } from "@/utils/react-scaffold";
 import RouterView from "@/router/router-view";
-import Page00000_RouterGuard from "@/view/Page00000_Setting/Page00000_RouterGuard.jsx";
+import Page00000_RouterGuard from "@/view/Page00000_RouterGuard/index.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const all_routers = routerlist.concat(otherrouter);
 
 root.render(
   <Router>
     <Page00000_RouterGuard>
-      <RouterView route={routes} />
+      <RouterView route={all_routers} />
     </Page00000_RouterGuard>
   </Router>
 );

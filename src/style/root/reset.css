@@ -43,3 +43,5 @@ button, input, select, textarea { font-size:100%; }
 
 /* 表格：表示边框合并在一起  控制单元格间距，即双边框间距为0*/
 table { border-collapse:collapse; border-spacing:0; }
+
+a,button { cursor: pointer; }
